@@ -11,7 +11,6 @@ import { destroyCookie } from "nookies";
 export const login = async (
   values: LoginFormDTO
 ): Promise<LoginResponseDTO> => {
-  logout();
   return (await axios.post("/auth/login", values)).data;
 };
 
